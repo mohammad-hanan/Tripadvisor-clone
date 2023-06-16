@@ -1,38 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css" />
-    <title>Tripadvisor</title>
-  </head>
-  <body>
-    <div class="main-container">
-      <header>
-        <nav>
-          <div class="nav-container">
-            <div class="nav-logo">
-              <img src="./assets/logo.svg" alt="" />
-            </div>
-            <ul>
-              <li><i class="fa-solid fa-pen"></i><a href="#">Review</a></li>
-              <li><i class="fa-regular fa-heart"></i> <a href="#">Trips</a></li>
-              <li><i class="fa-regular fa-bell"></i><a href="#">Alerts</a></li>
-              <li class="sign-in"><a href="#">Sign in</a></li>
-              <li>
-                <i class="fa-sharp fa-solid fa-cart-shopping"></i
-                ><a href="#">Basket</a>
-              </li>
-            </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./glider.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css" />
+  <title>Tripadvisor</title>
+</head>
+
+<body>
+  <div class="body-container">
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="nav-logo">
+            <img src="./assets/logo.svg" alt="" />
           </div>
-        </nav>
-      </header>
-    </div>
-    <script
-      src="https://kit.fontawesome.com/01f36dd510.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="main.js"></script>
-  </body>
+          <ul class="nav-items">
+            <li><i class="fa-solid fa-pen"></i><a href="#">Review</a></li>
+            <li><i class="fa-regular fa-heart"></i> <a href="#">Trips</a></li>
+            <li><i class="fa-regular fa-bell"></i><a href="#">Alerts</a></li>
+            <li class="sign-in"><a href="#">Sign in</a></li>
+            <li>
+              <i class="fa-sharp fa-solid fa-cart-shopping"></i><a href="#">Basket</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="main-container">
+        <ul class="action-menu">
+          <li>
+            <button>
+              <span>Hotels</span>
+              <i class="fa-solid fa-bed fa-lg"></i>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>Things to Do</span>
+              <i class="fa-solid fa-clipboard-check fa-lg"></i>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span>Holiday Homes</span>
+              <i class="fa-solid fa-tower-observation fa-lg"></i>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span> Restaurants </span>
+              <i class="fa-sharp fa-solid fa-utensils fa-lg"></i>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span> Travel Stories </span>
+              <i class="fa-solid fa-globe fa-lg"></i>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span> More </span>
+              <i class="fa-solid fa-ellipsis fa-xl"></i>
+            </button>
+          </li>
+        </ul>
+        <section class="search-section" id="search-overlay">
+          <div class="search-section-container">
+            <img src="./assets/homemar2022_dt_trans.png" alt="" />
+            <div class="search-input">
+              <form accept="/gooo">
+                <button type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="search" placeholder="Where to?" />
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="banner-section">
+          <div class="banner-section-container">
+            <div class="banner-content">
+              <h1>Check into the world's best hotels</h1>
+              <p>See our top 1%, powered by real reviews.</p>
+              <button>See the list</button>
+            </div>
+          </div>
+        </section>
+        <section class="hotel-categories-section">
+          <div class="hotel-categories-section-container">
+            <div class="hotel-categories-section-heading">
+              <h1>Explore top hotels by category</h1>
+              <p>From fam-friendly to next-level luxe and more</p>
+            </div>
+            <div class="glider-contain multiple">
+              <button class="glider-prev">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+              </button>
+              <div class="glider"></div>
+              <button class="glider-next">
+                <i class="fa-solid fa-circle-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="main.js"></script>
+
+  <script src="https://kit.fontawesome.com/01f36dd510.js" crossorigin="anonymous"></script>
+  <script src="./glider.min.js"></script>
+</body>
+
 </html>
