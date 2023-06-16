@@ -188,3 +188,27 @@ window.addEventListener("load", function () {
     },
   });
 });
+
+(async function fetchUsers() {
+  try {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/users"
+    );
+
+    const usersSection = document.querySelector(".users-section");
+    const userList = document.createElement("ul");
+    const users = response.data.map((user) => {
+      const listItem = document.createElement("li");
+      const anchorTag = document.createElement("a");
+      anchorTag.textContent = user.username;
+      anchorTag.setAttribute("href", `./user.html?id=${user.id}`);
+      listItem.appendChild(anchorTag);
+      userList.appendChild(listItem);
+      return user;
+    });
+    localStorage.setItem("users", JSON.stringify(users));
+    usersSection.appendChild(userList);
+  } catch (error) {
+    console.log(error)
+  }
+})();

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <section class="user-details">
+      <div class="user-details-container">
+        <div class="error"></div>
+
+        <div class="basic-details">
+          <div class="name"></div>
+          <div class="username"></div>
+          <div class="email"></div>
+          <div class="phone"></div>
+          <div class="website"></div>
+        </div>
+        <address>
+          <div class="suite"></div>
+          <div class="street"></div>
+          <div class="city"></div>
+          <div class="zipcode"></div>
+        </address>
+      </div>
+    </section>
+
+    <script>
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      const { id } = Object.fromEntries(urlSearchParams.entries());
+
+      (function getUserDetails() {
+        const users = JSON.parse(localStorage.getItem("users"));
+        const user = users.filter((user) => user.id === +id)[0];
+        if (user) {
+          document.querySelector(
+            ".name"
+          ).innerHTML = `<div>Name:</div> <div>${user.name}</div>`;
+          document.querySelector(
+            ".username"
+          ).innerHTML = `<div>Username:</div> ${user.username}`;
+          document.querySelector(
+            ".email"
+          ).innerHTML = `<div>Email:</div> ${user.email}`;
+          document.querySelector(
+            ".phone"
+          ).innerHTML = `<div>Phone:</div> ${user.phone}`;
+          document.querySelector(
+            ".website"
+          ).innerHTML = `<div>Website:</div> ${user.website}`;
+          document.querySelector(".suite").innerHTML = user.address.suite;
+          document.querySelector(".street").innerHTML = user.address.street;
+          document.querySelector(".city").innerHTML = user.address.city;
+          document.querySelector(".zipcode").innerHTML = user.address.zipcode;
+        } else {
+          document.querySelector(".error").innerHTML =
+            "<div>404</div> <br/> <div>User Not Found</div>";
+        }
+      })();
+    </script>
+  </body>
+</html>
