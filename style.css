@@ -204,12 +204,14 @@ header .nav-logo img {
   margin-top: 5rem;
 }
 
-.hotel-categories-section-heading h1 {
+.hotel-categories-section-heading h1,
+.tour-packages-section-heading h1 {
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
-.hotel-categories-section-heading p {
+.hotel-categories-section-heading p,
+.tour-packages-section-heading p {
   font-weight: 300;
   margin-bottom: 1rem;
 }
@@ -243,11 +245,89 @@ header .nav-logo img {
   transform: translateX(10px) translateY(30px);
 }
 
-.category-image-container {
+.category-image-container,
+.image-container {
   margin: 0 7px;
 }
 
 .glider-contain button:hover {
   color: black;
   background-color: white;
+}
+
+.tour-packages-section-container {
+  display: flex;
+}
+
+.tour-packages-section {
+  margin-top: 5rem;
+}
+
+.tour-packages-section .ratings {
+  display: flex;
+  gap: 1px;
+}
+
+.tour-packages-section .ratings div {
+  background-color: #00aa6c;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.tour-packages-section .pkg-ratings-and-reviews {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0px 9px;
+}
+
+.tour-packages-section .pkg-ratings-and-reviews .reviews {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.tour-packages-section .package-desc {
+  padding: 7px;
+  font-weight: 500;
+}
+
+.tour-packages-section .package-price {
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 6px;
+}
+
+.tour-packages-section .package-image {
+  position: relative;
+}
+
+.tour-packages-section .package-image {
+  position: relative;
+}
+
+.tour-packages-section .package-image .wishlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  top: 5%;
+  left: 82%;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.tour-packages-section .package-image .wishlist-container i {
+  font-size: 1.2rem;
+}
+
+.glider-contain button.package-next {
+  transform: translateX(-10px) translateY(-10px);
+}
+
+.glider-contain button.package-prev {
+  transform: translateX(10px) translateY(-10px);
 }

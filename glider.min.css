@@ -9,7 +9,10 @@
 }
 .glider-dot,
 .glider-next,
-.glider-prev {
+.glider-prev,
+.package-next,
+.package-prev
+{
   border: 0;
   padding: 0;
   user-select: none;
@@ -58,7 +61,9 @@
   height: 0;
 }
 .glider-next,
-.glider-prev {
+.glider-prev,
+.package-prev,
+.package-next {
   position: absolute;
   background: 0 0;
   z-index: 2;
@@ -76,15 +81,24 @@
 .glider-next:focus,
 .glider-next:hover,
 .glider-prev:focus,
-.glider-prev:hover {
+.glider-prev:hover,
+.package-next:focus,
+.package-next:hover,
+.package-prev:focus,
+.package-prev:hover
+ {
   color: #ccc;
 }
-.glider-next {
+.glider-next,
+.package-next {
   right: -23px;
   left: auto;
 }
 .glider-next.hidden,
-.glider-prev.hidden {
+.glider-prev.hidden,
+.package-next.hidden,
+.package-prev.hidden
+{
   opacity: 0;
 }
 .glider-hide {
